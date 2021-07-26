@@ -1,0 +1,9 @@
+scan-build: Using '/usr/lib/llvm-11/bin/clang' for static analysis
+/usr/share/clang/scan-build-11/bin/../libexec/ccc-analyzer -o kilo kilo.c -Wall -W -pedantic -std=c99
+kilo.c:662:14: warning: Access to field 'size' results in a dereference of a null pointer (loaded from variable 'row') [core.NullDereference]
+    if (at > row->size) {
+             ^~~~~~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2021-06-11-024733-10721-1' to examine bug reports.

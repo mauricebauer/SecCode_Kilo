@@ -1,0 +1,53 @@
+kilo.c:348:9: warning: mixing declarations and code
+kilo.c:388:5: warning: mixing declarations and code
+kilo.c:513:5: warning: mixing declarations and code
+kilo.c:566:5: warning: mixing declarations and code
+kilo.c:761:20: warning: non-ANSI function declaration of function 'editorDelChar'
+kilo.c:802:5: warning: mixing declarations and code
+kilo.c:815:5: warning: mixing declarations and code
+kilo.c:913:9: warning: mixing declarations and code
+kilo.c:917:13: warning: mixing declarations and code
+kilo.c:939:30: warning: symbol 'buf' shadows an earlier one
+kilo.c:885:10: originally declared here
+kilo.c:956:5: warning: mixing declarations and code
+kilo.c:976:5: warning: mixing declarations and code
+kilo.c:983:5: warning: mixing declarations and code
+kilo.c:1039:9: warning: mixing declarations and code
+kilo.c:165:6: warning: symbol 'C_HL_extensions' was not declared. Should it be static?
+kilo.c:166:6: warning: symbol 'C_HL_keywords' was not declared. Should it be static?
+kilo.c:193:9: warning: too long initializer-string for array of char(no space for nul char)
+kilo.c:188:21: warning: symbol 'HLDB' was not declared. Should it be static?
+kilo.c:204:6: warning: symbol 'disableRawMode' was not declared. Should it be static?
+kilo.c:213:6: warning: symbol 'editorAtExit' was not declared. Should it be static?
+kilo.c:218:5: warning: symbol 'enableRawMode' was not declared. Should it be static?
+kilo.c:253:5: warning: symbol 'editorReadKey' was not declared. Should it be static?
+kilo.c:307:5: warning: symbol 'getCursorPosition' was not declared. Should it be static?
+kilo.c:331:5: warning: symbol 'getWindowSize' was not declared. Should it be static?
+kilo.c:366:5: warning: symbol 'is_separator' was not declared. Should it be static?
+kilo.c:373:5: warning: symbol 'editorRowHasOpenComment' was not declared. Should it be static?
+kilo.c:382:6: warning: symbol 'editorUpdateSyntax' was not declared. Should it be static?
+kilo.c:520:5: warning: symbol 'editorSyntaxToColor' was not declared. Should it be static?
+kilo.c:535:6: warning: symbol 'editorSelectSyntaxHighlight' was not declared. Should it be static?
+kilo.c:556:6: warning: symbol 'editorUpdateRow' was not declared. Should it be static?
+kilo.c:592:6: warning: symbol 'editorInsertRow' was not declared. Should it be static?
+kilo.c:613:6: warning: symbol 'editorFreeRow' was not declared. Should it be static?
+kilo.c:621:6: warning: symbol 'editorDelRow' was not declared. Should it be static?
+kilo.c:637:6: warning: symbol 'editorRowsToString' was not declared. Should it be static?
+kilo.c:661:6: warning: symbol 'editorRowInsertChar' was not declared. Should it be static?
+kilo.c:684:6: warning: symbol 'editorRowAppendString' was not declared. Should it be static?
+kilo.c:694:6: warning: symbol 'editorRowDelChar' was not declared. Should it be static?
+kilo.c:703:6: warning: symbol 'editorInsertChar' was not declared. Should it be static?
+kilo.c:725:6: warning: symbol 'editorInsertNewline' was not declared. Should it be static?
+kilo.c:761:6: warning: symbol 'editorDelChar' was not declared. Should it be static?
+kilo.c:797:5: warning: symbol 'editorOpen' was not declared. Should it be static?
+kilo.c:830:5: warning: symbol 'editorSave' was not declared. Should it be static?
+kilo.c:867:6: warning: symbol 'abAppend' was not declared. Should it be static?
+kilo.c:876:6: warning: symbol 'abFree' was not declared. Should it be static?
+kilo.c:882:6: warning: symbol 'editorRefreshScreen' was not declared. Should it be static?
+kilo.c:1014:6: warning: symbol 'editorFind' was not declared. Should it be static?
+kilo.c:1112:6: warning: symbol 'editorMoveCursor' was not declared. Should it be static?
+kilo.c:1188:6: warning: symbol 'editorProcessKeypress' was not declared. Should it be static?
+kilo.c:1257:5: warning: symbol 'editorFileWasModified' was not declared. Should it be static?
+kilo.c:1261:6: warning: symbol 'updateWindowSize' was not declared. Should it be static?
+kilo.c:1270:6: warning: symbol 'handleSigWinCh' was not declared. Should it be static?
+kilo.c:1277:6: warning: symbol 'initEditor' was not declared. Should it be static?

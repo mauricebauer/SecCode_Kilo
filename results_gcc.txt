@@ -1,0 +1,636 @@
+kilo.c: In function ‘enableRawMode’:
+kilo.c:229:17: warning: unsigned conversion from ‘int’ to ‘tcflag_t’ {aka ‘unsigned int’} changes value from ‘-1331’ to ‘4294965965’ [-Wsign-conversion]
+  229 |     raw.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
+      |                 ^~
+kilo.c:231:17: warning: unsigned conversion from ‘int’ to ‘tcflag_t’ {aka ‘unsigned int’} changes value from ‘-2’ to ‘4294967294’ [-Wsign-conversion]
+  231 |     raw.c_oflag &= ~(OPOST);
+      |                 ^~
+kilo.c:236:17: warning: unsigned conversion from ‘int’ to ‘tcflag_t’ {aka ‘unsigned int’} changes value from ‘-32780’ to ‘4294934516’ [-Wsign-conversion]
+  236 |     raw.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
+      |                 ^~
+kilo.c: In function ‘editorUpdateSyntax’:
+kilo.c:383:34: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  383 |     row->hl = realloc(row->hl,row->rsize);
+      |                               ~~~^~~~~~~
+kilo.c:384:33: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  384 |     memset(row->hl,HL_NORMAL,row->rsize);
+      |                              ~~~^~~~~~~
+kilo.c:415:50: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  415 |             memset(row->hl+i,HL_COMMENT,row->size-i);
+      |                                         ~~~~~~~~~^~
+kilo.c:485:28: warning: conversion to ‘int’ from ‘size_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+  485 |                 int klen = strlen(keywords[j]);
+      |                            ^~~~~~
+kilo.c:489:43: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  489 |                 if (!memcmp(p,keywords[j],klen) &&
+      |                                           ^~~~
+kilo.c:493:70: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  493 |                     memset(row->hl+i,kw2 ? HL_KEYWORD2 : HL_KEYWORD1,klen);
+      |                                                                      ^~~~
+kilo.c: In function ‘editorSelectSyntaxHighlight’:
+kilo.c:541:26: warning: conversion to ‘int’ from ‘size_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+  541 |             int patlen = strlen(s->filematch[i]);
+      |                          ^~~~~~
+kilo.c: In function ‘editorUpdateRow’:
+kilo.c:573:36: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+  573 |     row->render = malloc(row->size + tabs*8 + nonprint*9 + 1);
+      |                                    ^
+kilo.c: In function ‘editorInsertRow’:
+kilo.c:594:39: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+  594 |     E.row = realloc(E.row,sizeof(erow)*(E.numrows+1));
+      |                                       ^
+kilo.c:596:53: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+  596 |         memmove(E.row+at+1,E.row+at,sizeof(E.row[0])*(E.numrows-at));
+      |                                                     ^
+kilo.c:599:22: warning: conversion to ‘int’ from ‘size_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+  599 |     E.row[at].size = len;
+      |                      ^~~
+kilo.c: In function ‘editorDelRow’:
+kilo.c:627:49: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+  627 |     memmove(E.row+at,E.row+at+1,sizeof(E.row[0])*(E.numrows-at-1));
+      |                                                 ^
+kilo.c: In function ‘editorRowsToString’:
+kilo.c:648:22: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  648 |     p = buf = malloc(totlen);
+      |                      ^~~~~~
+kilo.c:650:41: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  650 |         memcpy(p,E.row[j].chars,E.row[j].size);
+      |                                 ~~~~~~~~^~~~~
+kilo.c: In function ‘editorRowInsertChar’:
+kilo.c:667:57: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  667 |         row->chars = realloc(row->chars,row->size+padlen+2);
+      |                                         ~~~~~~~~~~~~~~~~^~
+kilo.c:668:41: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  668 |         memset(row->chars+row->size,' ',padlen);
+      |                                         ^~~~~~
+kilo.c:674:50: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  674 |         row->chars = realloc(row->chars,row->size+2);
+      |                                         ~~~~~~~~~^~
+kilo.c:675:59: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  675 |         memmove(row->chars+at+1,row->chars+at,row->size-at+1);
+      |                                               ~~~~~~~~~~~~^~
+kilo.c:678:22: warning: conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+  678 |     row->chars[at] = c;
+      |                      ^
+kilo.c: In function ‘editorRowAppendString’:
+kilo.c:685:46: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  685 |     row->chars = realloc(row->chars,row->size+len+1);
+      |                                              ^
+kilo.c:687:15: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  687 |     row->size += len;
+      |               ^~
+kilo.c:687:18: warning: conversion to ‘int’ from ‘size_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+  687 |     row->size += len;
+      |                  ^~~
+kilo.c: In function ‘editorRowDelChar’:
+kilo.c:696:52: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  696 |     memmove(row->chars+at,row->chars+at+1,row->size-at);
+      |                                           ~~~~~~~~~^~~
+kilo.c: In function ‘editorInsertNewline’:
+kilo.c:744:63: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  744 |         editorInsertRow(filerow+1,row->chars+filecol,row->size-filecol);
+      |                                                      ~~~~~~~~~^~~~~~~~
+kilo.c: In function ‘editorDelChar’:
+kilo.c:771:63: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  771 |         editorRowAppendString(&E.row[filerow-1],row->chars,row->size);
+      |                                                            ~~~^~~~~~
+kilo.c: In function ‘editorOpen’:
+kilo.c:821:40: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘ssize_t’ {aka ‘int’} may change the sign of the result [-Wsign-conversion]
+  821 |         editorInsertRow(E.numrows,line,linelen);
+      |                                        ^~~~~~~
+kilo.c: In function ‘editorSave’:
+kilo.c:839:22: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  839 |     if (write(fd,buf,len) != len) goto writeerr;
+      |                      ^~~
+kilo.c: In function ‘abAppend’:
+kilo.c:868:38: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  868 |     char *new = realloc(ab->b,ab->len+len);
+      |                               ~~~~~~~^~~~
+kilo.c:871:26: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  871 |     memcpy(new+ab->len,s,len);
+      |                          ^~~
+kilo.c: In function ‘editorRefreshScreen’:
+kilo.c:976:18: warning: conversion to ‘int’ from ‘size_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+  976 |     int msglen = strlen(E.statusmsg);
+      |                  ^~~~~~
+kilo.c:994:22: warning: conversion to ‘int’ from ‘size_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+  994 |     abAppend(&ab,buf,strlen(buf));
+      |                      ^~~~~~~~~~~
+kilo.c:996:32: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  996 |     write(STDOUT_FILENO,ab.b,ab.len);
+      |                              ~~^~~~
+kilo.c: In function ‘editorFind’:
+kilo.c:1024:70: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 1024 |         memcpy(E.row[saved_hl_line].hl,saved_hl, E.row[saved_hl_line].rsize); \
+      |                                                  ~~~~~~~~~~~~~~~~~~~~^~~~~~
+kilo.c:1048:13: note: in expansion of macro ‘FIND_RESTORE_HL’
+ 1048 |             FIND_RESTORE_HL;
+      |             ^~~~~~~~~~~~~~~
+kilo.c:1057:33: warning: conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+ 1057 |                 query[qlen++] = c;
+      |                                 ^
+kilo.c:1024:70: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 1024 |         memcpy(E.row[saved_hl_line].hl,saved_hl, E.row[saved_hl_line].rsize); \
+      |                                                  ~~~~~~~~~~~~~~~~~~~~^~~~~~
+kilo.c:1083:13: note: in expansion of macro ‘FIND_RESTORE_HL’
+ 1083 |             FIND_RESTORE_HL;
+      |             ^~~~~~~~~~~~~~~
+kilo.c:1090:42: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 1090 |                     saved_hl = malloc(row->rsize);
+      |                                       ~~~^~~~~~~
+kilo.c:1091:48: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 1091 |                     memcpy(saved_hl,row->hl,row->rsize);
+      |                                             ~~~^~~~~~~
+kilo.c:1092:58: warning: conversion to ‘size_t’ {aka ‘unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+ 1092 |                     memset(row->hl+match_offset,HL_MATCH,qlen);
+      |                                                          ^~~~
+kilo.c: In function ‘editorRowsToString’:
+kilo.c:655:8: warning: dereference of possibly-NULL ‘p’ [CWE-690] [-Wanalyzer-possible-null-dereference]
+  655 |     *p = '\0';
+      |     ~~~^~~~~~
+  ‘editorRowsToString’: events 1-7
+    |
+    |  643 |     for (j = 0; j < E.numrows; j++)
+    |      |     ^~~
+    |      |     |
+    |      |     (1) following ‘false’ branch...
+    |  644 |         totlen += E.row[j].size+1; /* +1 is for "\n" at end of every row */
+    |  645 |     *buflen = totlen;
+    |      |     ~~~~~~~~~~~~~~~~
+    |      |             |
+    |      |             (2) ...to here
+    |      |             (3) this call could return NULL
+    |......
+    |  648 |     p = buf = malloc(totlen);
+    |      |     ~~~~~~~~~~~~~~~~~~~~~~~~
+    |      |       |
+    |      |       (4) this call could return NULL
+    |  649 |     for (j = 0; j < E.numrows; j++) {
+    |      |     ~~~
+    |      |     |
+    |      |     (5) following ‘false’ branch...
+    |......
+    |  655 |     *p = '\0';
+    |      |     ~~~~~~~~~
+    |      |        |
+    |      |        (6) ...to here
+    |      |        (7) ‘p’ could be NULL: unchecked value from (4)
+    |
+kilo.c: In function ‘editorOpen’:
+kilo.c:804:5: warning: use of possibly-NULL ‘<unknown>’ where non-null expected [CWE-690] [-Wanalyzer-possible-null-argument]
+  804 |     memcpy(E.filename,filename,fnlen);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ‘editorOpen’: events 1-3
+    |
+    |  802 |     size_t fnlen = strlen(filename)+1;
+    |      |                    ^~~~~~~~~~~~~~~~
+    |      |                    |
+    |      |                    (1) this call could return NULL
+    |  803 |     E.filename = malloc(fnlen);
+    |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |      |                |
+    |      |                (2) state of ‘E.filename’: ‘freed’ -> ‘unchecked’ (origin: ‘<unknown>’)
+    |  804 |     memcpy(E.filename,filename,fnlen);
+    |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |      |     |
+    |      |     (3) argument 1 (‘<unknown>’) from (1) could be NULL where non-null expected
+    |
+In file included from kilo.c:46:
+/usr/include/string.h:43:14: note: argument 1 of ‘memcpy’ must be non-null
+   43 | extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+      |              ^~~~~~
+kilo.c: In function ‘editorFind’:
+kilo.c:1091:21: warning: use of possibly-NULL ‘saved_hl’ where non-null expected [CWE-690] [-Wanalyzer-possible-null-argument]
+ 1091 |                     memcpy(saved_hl,row->hl,row->rsize);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ‘editorFind’: events 1-2
+    |
+    | 1014 | void editorFind(int fd) {
+    |      |      ^~~~~~~~~~
+    |      |      |
+    |      |      (1) entry to ‘editorFind’
+    |......
+    | 1037 |         editorRefreshScreen();
+    |      |         ~~~~~~~~~~~~~~~~~~~~~
+    |      |         |
+    |      |         (2) calling ‘editorRefreshScreen’ from ‘editorFind’
+    |
+    +--> ‘editorRefreshScreen’: events 3-4
+           |
+           |  882 | void editorRefreshScreen(void) {
+           |      |      ^~~~~~~~~~~~~~~~~~~
+           |      |      |
+           |      |      (3) entry to ‘editorRefreshScreen’
+           |......
+           |  888 |     abAppend(&ab,"\x1b[?25l",6); /* Hide cursor. */
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (4) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 5-7
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (5) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (7) ...to here
+                  |      |        (6) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 8-9
+           |
+           |  888 |     abAppend(&ab,"\x1b[?25l",6); /* Hide cursor. */
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (8) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |  889 |     abAppend(&ab,"\x1b[H",3); /* Go home. */
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (9) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 10-12
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (10) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (12) ...to here
+                  |      |        (11) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 13-16
+           |
+           |  889 |     abAppend(&ab,"\x1b[H",3); /* Go home. */
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (13) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |  890 |     for (y = 0; y < E.screenrows; y++) {
+           |      |     ~~~
+           |      |     |
+           |      |     (14) following ‘false’ branch...
+           |......
+           |  954 |     abAppend(&ab,"\x1b[0K",4);
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (15) ...to here
+           |      |     (16) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 17-19
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (17) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (19) ...to here
+                  |      |        (18) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 20-21
+           |
+           |  954 |     abAppend(&ab,"\x1b[0K",4);
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (20) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |  955 |     abAppend(&ab,"\x1b[7m",4);
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (21) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 22-24
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (22) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (24) ...to here
+                  |      |        (23) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 25-28
+           |
+           |  955 |     abAppend(&ab,"\x1b[7m",4);
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (25) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |  956 |     char status[80], rstatus[80];
+           |  957 |     int len = snprintf(status, sizeof(status), "%.20s - %d lines %s",
+           |      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |               |
+           |      |               (26) following ‘true’ branch...
+           |      |               (27) ...to here
+           |  958 |         E.filename, E.numrows, E.dirty ? "(modified)" : "");
+           |      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |......
+           |  962 |     abAppend(&ab,status,len);
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (28) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 29-31
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (29) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (31) ...to here
+                  |      |        (30) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 32-33
+           |
+           |  962 |     abAppend(&ab,status,len);
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (32) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |......
+           |  972 |     abAppend(&ab,"\x1b[0m\r\n",6);
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (33) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 34-36
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (34) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (36) ...to here
+                  |      |        (35) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 37-38
+           |
+           |  972 |     abAppend(&ab,"\x1b[0m\r\n",6);
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (37) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |......
+           |  975 |     abAppend(&ab,"\x1b[0K",4);
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (38) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 39-41
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (39) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (41) ...to here
+                  |      |        (40) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 42-49
+           |
+           |  975 |     abAppend(&ab,"\x1b[0K",4);
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (42) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |......
+           |  986 |     erow *row = (filerow >= E.numrows) ? NULL : &E.row[filerow];
+           |      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |                                               |   |
+           |      |                                               |   (44) ...to here
+           |      |                                               (43) following ‘true’ branch...
+           |  987 |     if (row) {
+           |      |        ~
+           |      |        |
+           |      |        (45) following ‘true’ branch (when ‘row’ is non-NULL)...
+           |  988 |         for (j = E.coloff; j < (E.cx+E.coloff); j++) {
+           |      |         ~~~  ~~~~~~~~~~~~
+           |      |         |      |
+           |      |         |      (46) ...to here
+           |      |         (47) following ‘false’ branch...
+           |......
+           |  993 |     snprintf(buf,sizeof(buf),"\x1b[%d;%dH",E.cy+1,cx);
+           |      |                                            ~~~~
+           |      |                                             |
+           |      |                                             (48) ...to here
+           |  994 |     abAppend(&ab,buf,strlen(buf));
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (49) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 50-52
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (50) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (52) ...to here
+                  |      |        (51) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: events 53-54
+           |
+           |  994 |     abAppend(&ab,buf,strlen(buf));
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (53) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |  995 |     abAppend(&ab,"\x1b[?25h",6); /* Show cursor. */
+           |      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (54) calling ‘abAppend’ from ‘editorRefreshScreen’
+           |
+           +--> ‘abAppend’: events 55-57
+                  |
+                  |  867 | void abAppend(struct abuf *ab, const char *s, int len) {
+                  |      |      ^~~~~~~~
+                  |      |      |
+                  |      |      (55) entry to ‘abAppend’
+                  |......
+                  |  870 |     if (new == NULL) return;
+                  |      |        ~             ~~~~~~
+                  |      |        |             |
+                  |      |        |             (57) ...to here
+                  |      |        (56) following ‘true’ branch (when ‘new’ is NULL)...
+                  |
+           <------+
+           |
+         ‘editorRefreshScreen’: event 58
+           |
+           |  995 |     abAppend(&ab,"\x1b[?25h",6); /* Show cursor. */
+           |      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+           |      |     |
+           |      |     (58) returning to ‘editorRefreshScreen’ from ‘abAppend’
+           |
+    <------+
+    |
+  ‘editorFind’: events 59-60
+    |
+    | 1037 |         editorRefreshScreen();
+    |      |         ^~~~~~~~~~~~~~~~~~~~~
+    |      |         |
+    |      |         (59) returning to ‘editorFind’ from ‘editorRefreshScreen’
+    | 1038 | 
+    | 1039 |         int c = editorReadKey(fd);
+    |      |                 ~~~~~~~~~~~~~~~~~
+    |      |                 |
+    |      |                 (60) calling ‘editorReadKey’ from ‘editorFind’
+    |
+    +--> ‘editorReadKey’: events 61-65
+           |
+           |  253 | int editorReadKey(int fd) {
+           |      |     ^~~~~~~~~~~~~
+           |      |     |
+           |      |     (61) entry to ‘editorReadKey’
+           |......
+           |  257 |     if (nread == -1) exit(1);
+           |      |        ~
+           |      |        |
+           |      |        (62) following ‘false’ branch (when ‘nread != -1’)...
+           |......
+           |  260 |         switch(c) {
+           |      |         ~~~~~~
+           |      |         |
+           |      |         (63) ...to here
+           |      |         (64) following ‘false’ branch...
+           |......
+           |  298 |         default:
+           |      |         ~~~~~~~
+           |      |         |
+           |      |         (65) ...to here
+           |
+    <------+
+    |
+  ‘editorFind’: events 66-80
+    |
+    | 1039 |         int c = editorReadKey(fd);
+    |      |                 ^~~~~~~~~~~~~~~~~
+    |      |                 |
+    |      |                 (66) returning to ‘editorFind’ from ‘editorReadKey’
+    | 1040 |         if (c == DEL_KEY || c == CTRL_H || c == BACKSPACE) {
+    | 1041 |             if (qlen != 0) query[--qlen] = '\0';
+    |      |                ~ 
+    |      |                |
+    |      |                (67) following ‘false’ branch (when ‘qlen == 0’)...
+    | 1042 |             last_match = -1;
+    |      |             ~~~~~~~~~~~~~~~
+    |      |                        |
+    |      |                        (68) ...to here
+    |......
+    | 1064 |         if (last_match == -1) find_next = 1;
+    |      |            ~                  ~~~~~~~~~~~~~
+    |      |            |                            |
+    |      |            |                            (70) ...to here
+    |      |            (69) following ‘true’ branch (when ‘last_match == -1’)...
+    | 1065 |         if (find_next) {
+    |      |            ~     
+    |      |            |
+    |      |            (71) following ‘true’ branch (when ‘find_next != 0’)...
+    | 1066 |             char *match = NULL;
+    |      |                   ~~~~~
+    |      |                   |
+    |      |                   (72) ...to here
+    |......
+    | 1070 |             for (i = 0; i < E.numrows; i++) {
+    |      |             ~~~  
+    |      |             |
+    |      |             (73) following ‘true’ branch...
+    | 1071 |                 current += find_next;
+    |      |                 ~~~~~~~~~~~~~~~~~~~~
+    |      |                         |
+    |      |                         (74) ...to here
+    | 1072 |                 if (current == -1) current = E.numrows-1;
+    |      |                    ~
+    |      |                    |
+    |      |                    (75) following ‘false’ branch (when ‘current != -1’)...
+    | 1073 |                 else if (current == E.numrows) current = 0;
+    |      |                         ~           ~~~~~~~~~
+    |      |                         |            |
+    |      |                         |            (76) ...to here
+    |      |                         (77) following ‘false’ branch...
+    | 1074 |                 match = strstr(E.row[current].render,query);
+    |      |                                ~~~~~
+    |      |                                 |
+    |      |                                 (78) ...to here
+    | 1075 |                 if (match) {
+    |      |                    ~
+    |      |                    |
+    |      |                    (79) following ‘true’ branch (when ‘match’ is non-NULL)...
+    | 1076 |                     match_offset = match-E.row[current].render;
+    |      |                                          ~~~~~
+    |      |                                           |
+    |      |                                           (80) ...to here
+    |
+  ‘editorFind’: event 81
+    |
+    | 1023 |     if (saved_hl) { \
+    |      |        ^
+    |      |        |
+    |      |        (81) following ‘false’ branch (when ‘saved_hl’ is NULL)...
+kilo.c:1083:13: note: in expansion of macro ‘FIND_RESTORE_HL’
+    | 1083 |             FIND_RESTORE_HL;
+    |      |             ^~~~~~~~~~~~~~~
+    |
+  ‘editorFind’: events 82-88
+    |
+    | 1085 |             if (match) {
+    |      |                ^
+    |      |                |
+    |      |                (82) ...to here
+    |      |                (83) following ‘true’ branch (when ‘match’ is non-NULL)...
+    | 1086 |                 erow *row = &E.row[current];
+    |      |                              ~~~~~
+    |      |                               |
+    |      |                               (84) ...to here
+    | 1087 |                 last_match = current;
+    | 1088 |                 if (row->hl) {
+    |      |                    ~
+    |      |                    |
+    |      |                    (85) following ‘true’ branch...
+    | 1089 |                     saved_hl_line = current;
+    |      |                     ~~~~~~~~~~~~~~~~~~~~~~~
+    |      |                                   |
+    |      |                                   (86) ...to here
+    |      |                                   (87) this call could return NULL
+    | 1090 |                     saved_hl = malloc(row->rsize);
+    | 1091 |                     memcpy(saved_hl,row->hl,row->rsize);
+    |      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |      |                     |
+    |      |                     (88) argument 1 (‘saved_hl’) from (87) could be NULL where non-null expected
+    |
+In file included from kilo.c:46:
+/usr/include/string.h:43:14: note: argument 1 of ‘memcpy’ must be non-null
+   43 | extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+      |              ^~~~~~

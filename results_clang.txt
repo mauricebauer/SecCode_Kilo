@@ -1,0 +1,401 @@
+kilo.c:38:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+#define _POSIX_C_SOURCE 200809L
+        ^
+kilo.c:165:7: warning: no previous extern declaration for non-static variable 'C_HL_extensions' [-Wmissing-variable-declarations]
+char *C_HL_extensions[] = {".c",".h",".cpp",".hpp",".cc",NULL};
+      ^
+kilo.c:165:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char *C_HL_extensions[] = {".c",".h",".cpp",".hpp",".cc",NULL};
+^
+kilo.c:166:7: warning: no previous extern declaration for non-static variable 'C_HL_keywords' [-Wmissing-variable-declarations]
+char *C_HL_keywords[] = {
+      ^
+kilo.c:166:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char *C_HL_keywords[] = {
+^
+kilo.c:188:21: warning: no previous extern declaration for non-static variable 'HLDB' [-Wmissing-variable-declarations]
+struct editorSyntax HLDB[] = {
+                    ^
+kilo.c:188:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+struct editorSyntax HLDB[] = {
+^
+kilo.c:204:6: warning: no previous prototype for function 'disableRawMode' [-Wmissing-prototypes]
+void disableRawMode(int fd) {
+     ^
+kilo.c:204:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void disableRawMode(int fd) {
+^
+static 
+kilo.c:213:6: warning: no previous prototype for function 'editorAtExit' [-Wmissing-prototypes]
+void editorAtExit(void) {
+     ^
+kilo.c:213:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorAtExit(void) {
+^
+static 
+kilo.c:229:20: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    raw.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
+                ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+kilo.c:231:20: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    raw.c_oflag &= ~(OPOST);
+                ~~ ^~~~~~~~
+kilo.c:236:20: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    raw.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
+                ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+kilo.c:218:5: warning: no previous prototype for function 'enableRawMode' [-Wmissing-prototypes]
+int enableRawMode(int fd) {
+    ^
+kilo.c:218:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int enableRawMode(int fd) {
+^
+static 
+kilo.c:253:5: warning: no previous prototype for function 'editorReadKey' [-Wmissing-prototypes]
+int editorReadKey(int fd) {
+    ^
+kilo.c:253:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int editorReadKey(int fd) {
+^
+static 
+kilo.c:307:5: warning: no previous prototype for function 'getCursorPosition' [-Wmissing-prototypes]
+int getCursorPosition(int ifd, int ofd, int *rows, int *cols) {
+    ^
+kilo.c:307:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int getCursorPosition(int ifd, int ofd, int *rows, int *cols) {
+^
+static 
+kilo.c:331:5: warning: no previous prototype for function 'getWindowSize' [-Wmissing-prototypes]
+int getWindowSize(int ifd, int ofd, int *rows, int *cols) {
+    ^
+kilo.c:331:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int getWindowSize(int ifd, int ofd, int *rows, int *cols) {
+^
+static 
+kilo.c:366:5: warning: no previous prototype for function 'is_separator' [-Wmissing-prototypes]
+int is_separator(int c) {
+    ^
+kilo.c:366:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int is_separator(int c) {
+^
+static 
+kilo.c:373:5: warning: no previous prototype for function 'editorRowHasOpenComment' [-Wmissing-prototypes]
+int editorRowHasOpenComment(erow *row) {
+    ^
+kilo.c:373:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int editorRowHasOpenComment(erow *row) {
+^
+static 
+kilo.c:383:36: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    row->hl = realloc(row->hl,row->rsize);
+              ~~~~~~~         ~~~~~^~~~~
+kilo.c:384:35: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    memset(row->hl,HL_NORMAL,row->rsize);
+    ~~~~~~                   ~~~~~^~~~~
+kilo.c:415:50: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            memset(row->hl+i,HL_COMMENT,row->size-i);
+            ~~~~~~                      ~~~~~~~~~^~
+kilo.c:485:28: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+                int klen = strlen(keywords[j]);
+                    ~~~~   ^~~~~~~~~~~~~~~~~~~
+kilo.c:489:43: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                if (!memcmp(p,keywords[j],klen) &&
+                     ~~~~~~               ^~~~
+kilo.c:493:70: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                    memset(row->hl+i,kw2 ? HL_KEYWORD2 : HL_KEYWORD1,klen);
+                    ~~~~~~                                           ^~~~
+kilo.c:382:6: warning: no previous prototype for function 'editorUpdateSyntax' [-Wmissing-prototypes]
+void editorUpdateSyntax(erow *row) {
+     ^
+kilo.c:382:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorUpdateSyntax(erow *row) {
+^
+static 
+kilo.c:520:5: warning: no previous prototype for function 'editorSyntaxToColor' [-Wmissing-prototypes]
+int editorSyntaxToColor(int hl) {
+    ^
+kilo.c:520:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int editorSyntaxToColor(int hl) {
+^
+static 
+kilo.c:541:26: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+            int patlen = strlen(s->filematch[i]);
+                ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~
+kilo.c:535:6: warning: no previous prototype for function 'editorSelectSyntaxHighlight' [-Wmissing-prototypes]
+void editorSelectSyntaxHighlight(char *filename) {
+     ^
+kilo.c:535:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorSelectSyntaxHighlight(char *filename) {
+^
+static 
+kilo.c:573:31: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    row->render = malloc(row->size + tabs*8 + nonprint*9 + 1);
+                         ~~~~~^~~~ ~
+kilo.c:556:6: warning: no previous prototype for function 'editorUpdateRow' [-Wmissing-prototypes]
+void editorUpdateRow(erow *row) {
+     ^
+kilo.c:556:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorUpdateRow(erow *row) {
+^
+static 
+kilo.c:594:50: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    E.row = realloc(E.row,sizeof(erow)*(E.numrows+1));
+                                      ~ ~~~~~~~~~^~
+kilo.c:596:64: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        memmove(E.row+at+1,E.row+at,sizeof(E.row[0])*(E.numrows-at));
+                                                    ~ ~~~~~~~~~^~~
+kilo.c:599:22: warning: implicit conversion changes signedness: 'size_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+    E.row[at].size = len;
+                   ~ ^~~
+kilo.c:592:6: warning: no previous prototype for function 'editorInsertRow' [-Wmissing-prototypes]
+void editorInsertRow(int at, char *s, size_t len) {
+     ^
+kilo.c:592:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorInsertRow(int at, char *s, size_t len) {
+^
+static 
+kilo.c:613:6: warning: no previous prototype for function 'editorFreeRow' [-Wmissing-prototypes]
+void editorFreeRow(erow *row) {
+     ^
+kilo.c:613:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorFreeRow(erow *row) {
+^
+static 
+kilo.c:627:63: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    memmove(E.row+at,E.row+at+1,sizeof(E.row[0])*(E.numrows-at-1));
+                                                ~ ~~~~~~~~~~~~^~
+kilo.c:621:6: warning: no previous prototype for function 'editorDelRow' [-Wmissing-prototypes]
+void editorDelRow(int at) {
+     ^
+kilo.c:621:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorDelRow(int at) {
+^
+static 
+kilo.c:648:22: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    p = buf = malloc(totlen);
+              ~~~~~~ ^~~~~~
+kilo.c:650:42: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        memcpy(p,E.row[j].chars,E.row[j].size);
+        ~~~~~~                  ~~~~~~~~~^~~~
+kilo.c:637:7: warning: no previous prototype for function 'editorRowsToString' [-Wmissing-prototypes]
+char *editorRowsToString(int *buflen) {
+      ^
+kilo.c:637:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+char *editorRowsToString(int *buflen) {
+^
+static 
+kilo.c:667:57: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        row->chars = realloc(row->chars,row->size+padlen+2);
+                     ~~~~~~~            ~~~~~~~~~~~~~~~~^~
+kilo.c:668:41: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        memset(row->chars+row->size,' ',padlen);
+        ~~~~~~                          ^~~~~~
+kilo.c:674:50: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        row->chars = realloc(row->chars,row->size+2);
+                     ~~~~~~~            ~~~~~~~~~^~
+kilo.c:675:59: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        memmove(row->chars+at+1,row->chars+at,row->size-at+1);
+        ~~~~~~~                               ~~~~~~~~~~~~^~
+kilo.c:678:22: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+    row->chars[at] = c;
+                   ~ ^
+kilo.c:661:6: warning: no previous prototype for function 'editorRowInsertChar' [-Wmissing-prototypes]
+void editorRowInsertChar(erow *row, int at, int c) {
+     ^
+kilo.c:661:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorRowInsertChar(erow *row, int at, int c) {
+^
+static 
+kilo.c:685:42: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    row->chars = realloc(row->chars,row->size+len+1);
+                                    ~~~~~^~~~~
+kilo.c:684:6: warning: no previous prototype for function 'editorRowAppendString' [-Wmissing-prototypes]
+void editorRowAppendString(erow *row, char *s, size_t len) {
+     ^
+kilo.c:684:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorRowAppendString(erow *row, char *s, size_t len) {
+^
+static 
+kilo.c:696:52: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    memmove(row->chars+at,row->chars+at+1,row->size-at);
+    ~~~~~~~                               ~~~~~~~~~^~~
+kilo.c:694:6: warning: no previous prototype for function 'editorRowDelChar' [-Wmissing-prototypes]
+void editorRowDelChar(erow *row, int at) {
+     ^
+kilo.c:694:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorRowDelChar(erow *row, int at) {
+^
+static 
+kilo.c:703:6: warning: no previous prototype for function 'editorInsertChar' [-Wmissing-prototypes]
+void editorInsertChar(int c) {
+     ^
+kilo.c:703:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorInsertChar(int c) {
+^
+static 
+kilo.c:744:63: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned int') [-Wsign-conversion]
+        editorInsertRow(filerow+1,row->chars+filecol,row->size-filecol);
+        ~~~~~~~~~~~~~~~                              ~~~~~~~~~^~~~~~~~
+kilo.c:725:6: warning: no previous prototype for function 'editorInsertNewline' [-Wmissing-prototypes]
+void editorInsertNewline(void) {
+     ^
+kilo.c:725:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorInsertNewline(void) {
+^
+static 
+kilo.c:771:65: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned int') [-Wsign-conversion]
+        editorRowAppendString(&E.row[filerow-1],row->chars,row->size);
+        ~~~~~~~~~~~~~~~~~~~~~                              ~~~~~^~~~
+kilo.c:761:6: warning: no previous prototype for function 'editorDelChar' [-Wmissing-prototypes]
+void editorDelChar() {
+     ^
+kilo.c:761:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorDelChar() {
+^
+static 
+kilo.c:761:19: warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void editorDelChar() {
+                  ^
+kilo.c:821:40: warning: implicit conversion changes signedness: 'ssize_t' (aka 'int') to 'size_t' (aka 'unsigned int') [-Wsign-conversion]
+        editorInsertRow(E.numrows,line,linelen);
+        ~~~~~~~~~~~~~~~                ^~~~~~~
+kilo.c:797:5: warning: no previous prototype for function 'editorOpen' [-Wmissing-prototypes]
+int editorOpen(char *filename) {
+    ^
+kilo.c:797:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int editorOpen(char *filename) {
+^
+static 
+kilo.c:839:22: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned int') [-Wsign-conversion]
+    if (write(fd,buf,len) != len) goto writeerr;
+        ~~~~~        ^~~
+kilo.c:830:5: warning: no previous prototype for function 'editorSave' [-Wmissing-prototypes]
+int editorSave(void) {
+    ^
+kilo.c:830:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int editorSave(void) {
+^
+static 
+kilo.c:868:38: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    char *new = realloc(ab->b,ab->len+len);
+                ~~~~~~~       ~~~~~~~^~~~
+kilo.c:871:26: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    memcpy(new+ab->len,s,len);
+    ~~~~~~               ^~~
+kilo.c:867:6: warning: no previous prototype for function 'abAppend' [-Wmissing-prototypes]
+void abAppend(struct abuf *ab, const char *s, int len) {
+     ^
+kilo.c:867:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void abAppend(struct abuf *ab, const char *s, int len) {
+^
+static 
+kilo.c:876:6: warning: no previous prototype for function 'abFree' [-Wmissing-prototypes]
+void abFree(struct abuf *ab) {
+     ^
+kilo.c:876:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void abFree(struct abuf *ab) {
+^
+static 
+kilo.c:939:30: warning: declaration shadows a local variable [-Wshadow]
+                        char buf[16];
+                             ^
+kilo.c:885:10: note: previous declaration is here
+    char buf[32];
+         ^
+kilo.c:976:18: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    int msglen = strlen(E.statusmsg);
+        ~~~~~~   ^~~~~~~~~~~~~~~~~~~
+kilo.c:994:22: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    abAppend(&ab,buf,strlen(buf));
+    ~~~~~~~~         ^~~~~~~~~~~
+kilo.c:996:33: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned int') [-Wsign-conversion]
+    write(STDOUT_FILENO,ab.b,ab.len);
+    ~~~~~                    ~~~^~~
+kilo.c:882:6: warning: no previous prototype for function 'editorRefreshScreen' [-Wmissing-prototypes]
+void editorRefreshScreen(void) {
+     ^
+kilo.c:882:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorRefreshScreen(void) {
+^
+static 
+kilo.c:1005:47: warning: format string is not a string literal [-Wformat-nonliteral]
+    vsnprintf(E.statusmsg,sizeof(E.statusmsg),fmt,ap);
+                                              ^~~
+kilo.c:1048:13: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            FIND_RESTORE_HL;
+            ^~~~~~~~~~~~~~~
+kilo.c:1024:71: note: expanded from macro 'FIND_RESTORE_HL'
+        memcpy(E.row[saved_hl_line].hl,saved_hl, E.row[saved_hl_line].rsize); \
+        ~~~~~~                                   ~~~~~~~~~~~~~~~~~~~~~^~~~~
+kilo.c:1057:33: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                query[qlen++] = c;
+                              ~ ^
+kilo.c:1083:13: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            FIND_RESTORE_HL;
+            ^~~~~~~~~~~~~~~
+kilo.c:1024:71: note: expanded from macro 'FIND_RESTORE_HL'
+        memcpy(E.row[saved_hl_line].hl,saved_hl, E.row[saved_hl_line].rsize); \
+        ~~~~~~                                   ~~~~~~~~~~~~~~~~~~~~~^~~~~
+kilo.c:1090:44: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                    saved_hl = malloc(row->rsize);
+                               ~~~~~~ ~~~~~^~~~~
+kilo.c:1091:50: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                    memcpy(saved_hl,row->hl,row->rsize);
+                    ~~~~~~                  ~~~~~^~~~~
+kilo.c:1092:58: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                    memset(row->hl+match_offset,HL_MATCH,qlen);
+                    ~~~~~~                               ^~~~
+kilo.c:1014:6: warning: no previous prototype for function 'editorFind' [-Wmissing-prototypes]
+void editorFind(int fd) {
+     ^
+kilo.c:1014:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorFind(int fd) {
+^
+static 
+kilo.c:1112:6: warning: no previous prototype for function 'editorMoveCursor' [-Wmissing-prototypes]
+void editorMoveCursor(int key) {
+     ^
+kilo.c:1112:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorMoveCursor(int key) {
+^
+static 
+kilo.c:1188:6: warning: no previous prototype for function 'editorProcessKeypress' [-Wmissing-prototypes]
+void editorProcessKeypress(int fd) {
+     ^
+kilo.c:1188:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void editorProcessKeypress(int fd) {
+^
+static 
+kilo.c:1211:9: warning: 'break' will never be executed [-Wunreachable-code-break]
+        break;
+        ^~~~~
+kilo.c:1257:5: warning: no previous prototype for function 'editorFileWasModified' [-Wmissing-prototypes]
+int editorFileWasModified(void) {
+    ^
+kilo.c:1257:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+int editorFileWasModified(void) {
+^
+static 
+kilo.c:1261:6: warning: no previous prototype for function 'updateWindowSize' [-Wmissing-prototypes]
+void updateWindowSize(void) {
+     ^
+kilo.c:1261:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void updateWindowSize(void) {
+^
+static 
+kilo.c:1270:6: warning: no previous prototype for function 'handleSigWinCh' [-Wmissing-prototypes]
+void handleSigWinCh(int unused __attribute__((unused))) {
+     ^
+kilo.c:1270:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void handleSigWinCh(int unused __attribute__((unused))) {
+^
+static 
+kilo.c:1277:6: warning: no previous prototype for function 'initEditor' [-Wmissing-prototypes]
+void initEditor(void) {
+     ^
+kilo.c:1277:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initEditor(void) {
+^
+static 
+kilo.c:1307:12: warning: 'return' will never be executed [-Wunreachable-code-return]
+    return 0;
+           ^
+82 warnings generated.
